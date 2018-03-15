@@ -20,7 +20,7 @@ class imageProcessor:
         self.data = re.split('\n', temp_list)
         self.data = list(filter(None,  self.data))
         self.data = list(filter(lambda name: name.strip(), self.data))
-        self.display()
+        #self.display()
         self.compareWordList()
 
     def compareWordList(self):
@@ -52,7 +52,7 @@ class imageProcessor:
 
             self.data[i] = updateString
 
-        self.display()
+        #self.display()
 
     def hasNumbers(self, stringToCheck):
         return any(char.isdigit() for char in stringToCheck)
@@ -64,15 +64,8 @@ class imageProcessor:
         else:
             return stringToUpdate
 
-    # def replaceSubstring(self, i, similarString):
-    #     StringToBeReplaced = self.data[i]
-    #     s = difflib.SequenceMatcher(None, StringToBeReplaced, similarString)
-    #     for opcode in s.get_opcodes():
-    #         print(opcode)
-    #         if opcode[0] == 'replace':
-    #
-    #         elif opcode[0] == 'insert':
-    #             print('insert')
+    def getData(self):
+        return self.data
 
     def display(self):
         print(self.data)
