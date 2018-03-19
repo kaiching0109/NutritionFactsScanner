@@ -28,12 +28,12 @@ class userInfoProcessor:
     def setHeight(self, height):
         self.height_in_centimeters = height
 
-    def getProfile(self):
-        profile = {
+    def getUserProfile(self):
+        userProfile = {
                     "NAME":     self.name,
                     "GENDER":   self.gender,
                     "AGE":      self.age,
                     "HEIGHT":   self.height_in_centimeters,
                     "WEIGHT":   self.weight_in_kilograms
                     }
-        return profile
+        return userProfile

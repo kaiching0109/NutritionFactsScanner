@@ -1,4 +1,4 @@
-class nutientProfileCalculator:
+class nutrientProfileCalculator:
 
     userProfile = {}
 
@@ -65,6 +65,7 @@ class nutientProfileCalculator:
         self.carbohydrateNeeds = (self.calorieNeeds * self.CARBOHYDRATES_LOWER_BOUND +
                                   self.calorieNeeds * self.CARBOHYDRATES_UPPER_BOUND)/2
 
+
     def getCalorieNeeds(self):
         return self.calorieNeeds
 
@@ -76,3 +77,12 @@ class nutientProfileCalculator:
 
     def getCarbohydrateNeeds(self):
         return self.carbohydrateNeeds
+
+    def getNutientProfile(self):
+        nutientProfile = {
+                    "CALORIE":     self.calorieNeeds,
+                    "PROTEIN":   self.proteinNeeds,
+                    "FAT":      self.fatNeeds,
+                    "CARBOHYDRATE":   self.carbohydrateNeeds,
+                    }
+        return nutientProfile

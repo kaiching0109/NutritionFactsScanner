@@ -20,7 +20,7 @@ class imageProcessor:
         self.data = re.split('\n', temp_list)
         self.data = list(filter(None,  self.data))
         self.data = list(filter(lambda name: name.strip(), self.data))
-        #self.display()
+        self.display()
         self.compareWordList()
 
     def compareWordList(self):
